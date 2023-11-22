@@ -20,7 +20,7 @@ export const fetchFavs = createAsyncThunk(
   "favorites/fetchFavorites",
   async (idUser: number): Promise<FavoriteCostume[]> => {
     try {
-      const res = await fetch(`/api/favorites/user/${idUser}`);
+      const res = await fetch(`/api/prueba`);
       const data = await res.json();
       return data;
     } catch (error) {
