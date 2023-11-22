@@ -32,7 +32,7 @@ export default async function handler(
         console.log(data)
         res.status(200).json(data);
       } else if (response.status === 204) {
-        res.status(204).end();
+        res.status(204);
       } else {
         console.error(response);
         throw new Error("Server error");
