@@ -6,14 +6,19 @@ export default async function handler(
 ) {
   if (req.method === "GET") {
     const { id } = req.query;
+    console.log(id)
     const url = `${process.env.PRODUCT_API_URL}/fav/user/${id}`;
+    console.log(url)
     const response = await fetch(url);
+    console.log(response)
     let data;
     if (response.ok) {
       data = await response.json();
     } else {
       data = [];
     }
+
+    console.log(data)
 
     res.status(200).json(data);
   }
